@@ -1,0 +1,86 @@
+body {
+	font-family: 'Open sans';
+}
+
+header {
+	background: white;
+}
+
+.banner {
+	background: gray;
+	position: relative;
+	height: 120px;
+
+}
+
+.top-bar {
+	background: yellow;
+	position: absolute;
+	max-height: 100px;
+	width: 100%;
+	bottom: 0px;
+	margin-bottom: 10px;
+}
+
+/*LEFT of top-bar*/
+.logo {
+	background: purple;
+	position: absolute;
+	float: left;
+	margin-left: 50px;
+	border-style: solid;
+	border-color: red;
+
+	height: 200px;
+	width: 200px;
+
+	max-height: 100%;
+	max-width: 100%;
+
+}
+
+.logo img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+
+/*RIGHT of top-bar*/
+.nav-menu {
+	background: green;
+	overflow: hidden;
+	padding-right: 50px;
+	
+}
+
+/*ul*/
+.menu-list {
+
+}
+
+.menu-item {
+	background: pink;
+	color: black;
+	float: right;
+	display: block;
+	text-decoration: none;
+	padding: 10px 20px;
+
+}
+
+.menu-item a {
+	background: teal;
+	font-size: 20px;
+}
+
+.menu-item a:hover {
+	color: white;
+	background: black;
+
+}
+
+.active-menu-item a{
+	background: white;
+}
+

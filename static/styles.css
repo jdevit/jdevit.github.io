@@ -6,6 +6,46 @@ header {
 	background: white;
 }
 
+/* Vertical */
+div.main-content {
+	scroll-snap-type: y mandatory;
+}
+
+
+
+/* Horizontal*/
+.side-scroll-container {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	border: solid 1px blue;
+}
+
+/*.side-scroll-container::-webkit-scrollbar {
+	display: none;
+}*/
+
+.side-scroll-container section {
+	height: 500px;
+	min-width: 300px;
+	margin: 10px;
+	border: solid 1px red;
+	scroll-snap-align: center;
+}
+
+
+
+section span.anchor {
+	background: blue;
+	display: block;
+	position: relative;
+	top: -100px;
+	visibility: hidden;
+	scroll-snap-align: start;
+}
+
+
+
 .banner {
 	background: gray;
 	position: relative;

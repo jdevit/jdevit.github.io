@@ -27,12 +27,17 @@ header {
 
 .side-scroll-container .carousel-item {
 	width: 80%;
-	background: lightcyan;
 	margin: 0px 1em;
 	flex-shrink: 0;
 	scroll-snap-align: center;
 }
 
+.side-scroll-container #carousel-end {
+	width: 10%;
+	/* background: transparent; */
+	margin: 0px 1em;
+	flex-shrink: 0;
+}
 
 .side-scroll-container .controls {
 	position: absolute;
@@ -58,10 +63,24 @@ header {
 	opacity: 1;
 }
 
+
 .side-scroll-container .carousel-arrows {
-	background: lightgrey;
+	background: rgb(199, 191, 191);
 	position: absolute;
-	padding: 10px 2px;
+	top: 50%;
+	padding: 20px 15px;
+	opacity: 0.4;
+	z-index: 1;
+}
+.side-scroll-container .carousel-arrows:hover {
+	border-radius: 3px;
+	opacity: 0.6;
+	cursor: pointer;
+}
+.carousel-arrows .arrow:hover {
+	border: solid black;
+	border-width: 0 4px 4px 0;
+	border-radius: 3px;
 }
 
 .side-scroll-container .c-a-left {
@@ -79,7 +98,6 @@ header {
 
 
 div.anchor {
-	background: blue;
 	display: block;
 	position: relative;
 	top: -50px;
@@ -115,6 +133,7 @@ div.anchor {
 	border-width: 0 4px 4px 0;
 	display: inline-block;
 	padding: 8px;
+	cursor: pointer;
 }
 
 .up {

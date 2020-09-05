@@ -106,7 +106,7 @@
 			</div>
 
 			<div class="container">
-				<div>My name is Jeremy and I enjoy designing software. :)</div>
+				<div>My name is Jeremy and I enjoy designing software.</div>
 			</div>
 		</div>
 
@@ -119,60 +119,65 @@
 			<div class="container">
 				<h1 class="title">Projects</h1>
 					
-					<div class="side-scroll-container" id="project-container">
-						<div id="project1" class="carousel-item" style="margin-left: 10%;">
-							<div><h1 class="title">Project1</h1></div>
-							<div>Details</div>
-							<div><a>see code</a></div>
+					<div>
+						<div class="side-scroll-container" id="project-container" onscroll="isScrolled()">
+							<div id="project0" class="carousel-item" style="margin-left: 10%;">
+								<div><h1 class="title">Project1</h1></div>
+								<div>Details</div>
+								<div><a>see code</a></div>
+							</div>
+							<div id="project1" class="carousel-item">
+								<div><h1 class="title">Project2</h1></div>
+								<div>Details</div>
+								<div><a>see code</a></div>
+							</div>
+							<div id="project2" class="carousel-item">
+								<div><h1 class="title">Project3</h1></div>
+								<div>Details</div>
+								<div><a>see code</a></div>
+							</div>
+							<div id="project3" class="carousel-item">
+								<div><h1 class="title">Project4</h1></div>
+								<div>Details</div>
+								<div><a>see code</a></div>
+							</div>
+							<div id="project4" class="carousel-item">
+								<div><h1 class="title">Project5</h1></div>
+								<div>Details</div>
+								<div><a>see code</a></div>
+							</div>
+							<div id="project5" class="carousel-item">
+								<div><h1 class="title">Project6</h1></div>
+								<div>Details</div>
+								<div><a>see code</a></div>
+							</div>					
+
+							<div id="carousel-end"></div>
+							
+							<div class="carousel-arrows c-a-left" onclick="scroll_Next(-1)" >
+								<div class="arrow left"></div>
+							</div>
+							
+							<div class="carousel-arrows c-a-right" onclick="scroll_Next(1)">
+								<div class="arrow right"></div>
+							</div>
 						</div>
-						<div id="project2" class="carousel-item">
-							<div><h1 class="title">Project2</h1></div>
-							<div>Details</div>
-							<div><a>see code</a></div>
-						</div>
-						<div id="project3" class="carousel-item">
-							<div><h1 class="title">Project3</h1></div>
-							<div>Details</div>
-							<div><a>see code</a></div>
-						</div>
-						<div id="project4" class="carousel-item">
-							<div><h1 class="title">Project4</h1></div>
-							<div>Details</div>
-							<div><a>see code</a></div>
-						</div>
-						<div id="project5" class="carousel-item">
-							<div><h1 class="title">Project5</h1></div>
-							<div>Details</div>
-							<div><a>see code</a></div>
-						</div>
-						<div id="project6" class="carousel-item" style="margin-right: 10%;">
-							<div><h1 class="title">Project6</h1></div>
-							<div>Details</div>
-							<div><a>see code</a></div>
-						</div>					
-						
-						<div class="carousel-arrows c-a-left">
-							<div class="arrow left"></div>
-						</div>
-						
-						<div class="carousel-arrows c-a-right">
-							<div class="arrow right"></div>
-						</div>
+
+
 
 						
 						
 
-						<div class="controls" id="projects-controls" text="hello">
-							<a class="dot active" onclick="scrollToAnchorHorizontal('project1')"></a>
+						<div class="controls level-item" id="projects-controls" text="hello">
+							<a class="dot active" onclick="scrollToAnchorHorizontal('project0')"></a>
+							<a class="dot" onclick="scrollToAnchorHorizontal('project1')"></a>
 							<a class="dot" onclick="scrollToAnchorHorizontal('project2')"></a>
 							<a class="dot" onclick="scrollToAnchorHorizontal('project3')"></a>
 							<a class="dot" onclick="scrollToAnchorHorizontal('project4')"></a>
 							<a class="dot" onclick="scrollToAnchorHorizontal('project5')"></a>
-							<a class="dot" onclick="scrollToAnchorHorizontal('project6')"></a>
 						</div>
 					</div>
 
-					<a onclick="show_x()">TEST BUTTON</a>
 
 
 			</div>

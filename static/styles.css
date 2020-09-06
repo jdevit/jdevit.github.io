@@ -16,14 +16,13 @@ header {
 /* Horizontal*/
 .side-scroll-container {
 	display: flex;
+	height: 500px;
 	width: 100%;
 	overflow-x: hidden;
 	scroll-snap-type: x mandatory;
 }
 
-/*.side-scroll-container::-webkit-scrollbar {
-	display: none;
-}*/
+
 
 .side-scroll-container .carousel-item {
 	width: 80%;

@@ -32,25 +32,22 @@
 				<nav class="navbar is-fixed-top has-background-dark shadow-bottom" role="navigation" aria-label="main navigation">
 			
 					<div class="container level noselect" id="fixed-nav">
-						<div class="level-left">
-							<h1 class="title">Jeeeeer</h1>
+						<div class="level-left is-narrow">
+							<h1 class="title level-item">Jeeeeer</h1>
 						</div>	
 						<div class="level-item">					
 
 							<div class="navbar level is-marginless is-mobile">
-								<div class="level-left">
-									<a class="navbar-item level-item" onclick="scrollToAnchor('home');">Home</a>
-									<a class="navbar-item level-item" onclick="scrollToAnchor('about');">About</a>
-									<a class="navbar-item level-item" onclick="scrollToAnchor('projects');">Projects</a>
-									<a class="navbar-item level-item" onclick="scrollToAnchor('likes');">Likes</a>
-									<a class="navbar-item level-item" onclick="scrollToAnchor('other');">Other</a>
-								</div>
+								<a class="navbar-item level-item" onclick="scrollToAnchor('home');">Home</a>
+								<a class="navbar-item level-item" onclick="scrollToAnchor('about');">About</a>
+								<a class="navbar-item level-item" onclick="scrollToAnchor('projects');">Projects</a>
+								<a class="navbar-item level-item" onclick="scrollToAnchor('likes');">Likes</a>
+								<a class="navbar-item level-item" onclick="scrollToAnchor('other');">Other</a>
 							</div>
-
-							</div>
-							<div class="level-right">
-									<a onclick="scrollToAnchor('footer');"><i class="arrow down"></i></a>
-							</div>
+								
+						</div>
+						<div class="level-right is-narrow">
+							<a class="level-item" onclick="scrollToAnchor('footer');"><i class="arrow down"></i></a>
 						</div>
 					</div>
 
@@ -65,7 +62,7 @@
 
 	</header>
 
-	<div class="main-content">
+	<div class="main-content" id="main-content">
 	<div class="top-nav-block anchor" id="top"></div>
 			
 	<div class="anchor" id="home"></div>
@@ -117,9 +114,9 @@
 	<section class="section hero is-fullheight-with-navbar">
 		<div class="hero-body">
 			<div class="container">
-				<h1 class="title">Projects</h1>
+				<h1 class="title has-text-centered is-uppercase">Projects</h1>
 					
-					<div>
+					<div class="proj-container">
 						<div class="side-scroll-container" id="project-container" onscroll="isScrolled()">
 							<div id="project0" class="carousel-item" style="margin-left: 10%;">
 								<div><h1 class="title">Job Application Manager</h1></div>
@@ -142,24 +139,24 @@
 								<div><a href="https://github.com/KwameYamoah/SharedProjects">Source</a></div>
 							</div>
 							<div id="project2" class="carousel-item">
-								<div><h1 class="title">Project3</h1></div>
-								<div>Details</div>
-								<div><a>see code</a></div>
+								<div><h1 class="title">Chess Android application</h1></div>
+								<div>Java, Android Studio</div>
+								<div>A chess game made for android</div>
+								<div><a>&nbsp;</a></div>
 							</div>
 							<div id="project3" class="carousel-item">
-								<div><h1 class="title">Project4</h1></div>
-								<div>Details</div>
-								<div><a>see code</a></div>
+								<div><h1 class="title">Mini IMDB movie scraper</h1></div>
+								<div>Python, Flask</div>
+								<div>
+									Input imdb movie url to retrieve information about movies.						
+								</div>
+								<div><a href="https://github.com/jeremyt0/movies">Source</a></div>
 							</div>
 							<div id="project4" class="carousel-item">
-								<div><h1 class="title">Project5</h1></div>
-								<div>Details</div>
-								<div><a>see code</a></div>
-							</div>
-							<div id="project5" class="carousel-item">
-								<div><h1 class="title">Project6</h1></div>
-								<div>Details</div>
-								<div><a>see code</a></div>
+								<div><h1 class="title">Big Two desktop application</h1></div>
+								<div>Java, JavaFX</div>
+								<div>Big Two card game as a desktop application.</div>
+								<div><a></a></div>
 							</div>					
 
 							<div id="carousel-end"></div>
@@ -184,7 +181,6 @@
 							<a class="dot" onclick="scrollToAnchorHorizontal('project2')"></a>
 							<a class="dot" onclick="scrollToAnchorHorizontal('project3')"></a>
 							<a class="dot" onclick="scrollToAnchorHorizontal('project4')"></a>
-							<a class="dot" onclick="scrollToAnchorHorizontal('project5')"></a>
 						</div>
 					</div>
 
@@ -199,7 +195,40 @@
 	<div class="anchor" id="likes"></div>
 	<section class="section hero is-dark is-fullheight-with-navbar">
 		<div class="hero-body">
-			<h1 class="title">Likes</h1>
+			
+			<div class="tile is-vertical">
+				<h1 class="title">These are some things I enjoy</h1>
+			</div>
+			<div class="tile is-vertical">
+				<div class="tile is-child"></div>
+				
+			</div>
+			<div class="tile is-vertical">
+				<div class="tile is-child">
+						<h1 class="is-size-5">Film</h1>
+						<ul>
+							<li><a class="is-size-6">My recommendations for anyone</a></li>
+							<li><a class="is-size-6">Ones that made me smile</a></li>
+						</ul>
+
+				</div>
+
+				<div class="tile is-child">
+					<h1 class="is-size-5">Music</h1>
+					<p class="is-size-6">Spotify all-time favourites</p>
+					<div>
+						<iframe src="https://open.spotify.com/embed/playlist/66jibHDp6JemVvYjhFi3Tl" width="380" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					</div>
+					
+				</div>
+				
+				<div class="tile is-child">
+					<h1 class="is-size-5">Sports</h1>
+					<p class="is-size-6">Give me any ball and I can make it fun.</p>
+				</div>
+			</div>
+			
+
 		</div>
 		
 	</section>
@@ -207,7 +236,8 @@
 	<div class="anchor" id="other"></div>
 	<section class="section hero is-fullheight-with-navbar">
 		<div class="hero-body">
-			<h1 class="title">Other</h1>
+			<h1 class="title">Contact</h1>
+
 		</div>
 		
 	</section>
@@ -221,11 +251,18 @@
 
 			<div class="hero-body">
 				<div class="container">
-					<div class="rows">
-						<div class="level-right"><a onclick="scrollToAnchor('top');"><i class="arrow up"></i></a></div>
-						<div class="level-item">_____________________</div>
-						<div class="level-item">Jeremy Tang 2020</div>
+					<div class="level">
+						<div class="level-left">Privacy policy</div>
+						
+						<div class="level-item">&nbsp;</div>
+
+						<div class="level-right">Jeremy Tang</div>
+						<div class="level-right">&nbsp; </div>
+						<div class="level-right">&#8270;</div>
+						<div class="level-right">&nbsp; </div>
+						<div class="level-right">2020 &#169;</div>
 					</div>
+					
 
 
 

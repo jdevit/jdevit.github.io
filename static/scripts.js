@@ -1,20 +1,5 @@
 
 
-$(document).ready(function() {
-	alert("Hi")
-	$('#project-container').scroll(function() {
-		alert("Hi");
-		
-		// var currentX = document.getElementById('project-container').scrollLeft - document.getElementById('project1').scrollLeft;
-		
-		// var style = document.getElementById('project1').currentStyle || window.getComputedStyle(document.getElementById('project1'));
-		// var cItemMarginR = parseFloat(style.marginRight);
-		// var cItemWidth = document.getElementById('project1').offsetWidth + cItemMarginR*2;
-
-		// updateControlActive(currentX, cItemWidth);
-
-	} );
-} );
 
 
 
@@ -61,20 +46,43 @@ function updateControlActive(currentX, itemWidth){
 	var id = getProjIndex(currentX, itemWidth, allDots);
 	allDots[id].classList.add('active');
 
-	// // Make carousel arrows hidden on either end
-	// if (id == 0){
-	// 	document.getElementsByClassName('c-a-left')[0].style.visibility = "hidden";
-	// }
-	// else if (id == allDots.length-1){
-	// 	document.getElementsByClassName('c-a-right')[0].style.visibility = "hidden";
-	// }
-	// else if (id != 0 || id != allDots.length-1){
-	// 	document.getElementsByClassName('carousel-arrows')[0].style.visibility = "visible";
-	// 	document.getElementsByClassName('carousel-arrows')[1].style.visibility = "visible";
-	// }
-
 }
 
+function updateContactFormHighlights() {
+	for (let i=0; i<document.getElementsByName('contact_form').length; i++) {
+		var input_field = document.getElementsByName('contact_form')[i];
+		if ( input_field.value == "") {
+			if (!input_field.classList.contains('is-danger')) {
+				input_field.classList.add('is-danger');
+			}
+			if (input_field.classList.contains('is-success')) {
+				input_field.classList.remove('is-success');
+			}
+		}
+		else {
+			if (input_field.classList.contains('is-danger')) {
+				input_field.classList.remove('is-danger');
+			}
+			if (!input_field.classList.contains('is-success')) {
+				input_field.classList.add('is-success');
+			}
+		}
+	}
+}
+
+function sendMail() {	
+	updateContactFormHighlights();
+
+	if (!document.getElementById('contact_name_input').value == "" && !document.getElementById('contact_message_input').value == "") {
+		// Send email
+		var link = 'mailto:jeeecontact@gmail.com' 
+		+ '&subject='+encodeURIComponent(document.getElementById('contact_name_input').value + " sent you a message on your website")
+		+ '&body=' +encodeURIComponent(document.getElementById('contact_message_input').value);
+
+		window.location.href = link;
+	}
+
+}
 
 
 function scrollToAnchor(anchor){

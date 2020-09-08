@@ -246,30 +246,32 @@
 				<div class="tile is-vertical">
 					<div class="tile is-child">
 						<div class="pr-6">
-							<div class="field">
+							<div class="field" id="contact-form ">
 								<label class="label">Name</label>
 								<div class="control">
-								  <input class="input" type="text" maxlength="30" placeholder="Name">
+								  <input class="input" type="text" name="contact_form" id="contact_name_input" maxlength="30" placeholder="Name">
 								</div>
 							  </div>
 							  
-							  <div class="field">
+							  <!-- <div class="field">
 								<label class="label">Email</label>
 								<div class="control">
-								  <input class="input" type="email" maxlength="64" placeholder="Email">
+								  <input class="input" type="email" name="contact_form" id="contact_email_input" maxlength="64" placeholder="Email">
 								</div>
-							  </div>
+							  </div> -->
 
 							  <div class="field">
 								<label class="label">Message</label>
 								<div class="control">
-								  <textarea class="textarea has-fixed-size" maxlength="300" placeholder="Give me your wisdom" ></textarea>
+								  <textarea class="textarea has-fixed-size" name="contact_form" id="contact_message_input" maxlength="300" placeholder="Give me your wisdom" ></textarea>
 								</div>
 							  </div>
 
 							  <div class="control">
-								<button class="button is-success">Send Message</button>
+								<button class="button is-success" onclick="sendMail(); return false;">Send Message*</button>
 							  </div>
+							  <div>*Will open your email client</div>
+
 
 
 						</div>

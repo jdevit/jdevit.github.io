@@ -1,9 +1,14 @@
 body {
 	font-family: 'Open sans';
+	height: 100%;
 }
 
 header {
 	background: white;
+}
+
+footer {
+	scroll-snap-align: end;
 }
 
 
@@ -11,28 +16,40 @@ ul li a:hover {
 	color: grey;
 }
 
+
+
 /* Vertical */
 #main-content {
+	overflow: hidden;
+}
+
+#main-content .main-content-wrapper {
+	position: fixed;
+	overflow-y: scroll;	
+	height: 100%;
+	width: 100%;
 	scroll-snap-type: y mandatory;
 }
 
-#main-content section {
+.main-content-wrapper .anchor {
 	scroll-snap-align: start;
 }
 
 
 /* Horizontal*/
+.proj-container {
+	overflow: hidden;
+}
+
 .side-scroll-container {
 	display: flex;
 	height: 100%;
 	width: 100%;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 }
 
-.proj-container {
-	overflow: hidden;
-}
+
 
 .side-scroll-container .carousel-item {
 	width: 80%;
@@ -106,12 +123,14 @@ ul li a:hover {
 div.anchor {
 	display: block;
 	position: relative;
+	height: 0px;
+	width: 0px;
 	top: -50px;
 	visibility: hidden;
 }
 
 
-.top-nav-block {
+div.top-nav-block {
 	display: block;
 	position: relative;
 	height: 50px;
@@ -172,3 +191,8 @@ transform: rotate(-45deg);
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
   }
+
+  ::-webkit-scrollbar {
+	  height: 0px;
+	width: 0px;
+}

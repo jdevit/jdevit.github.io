@@ -1,6 +1,36 @@
 
 
 
+// Functions to call when page loads
+document.addEventListener('DOMContentLoaded', function(){
+	
+	var navbar = document.getElementById('the-navbar');
+	var sections = document.querySelectorAll('section.is-fullheight-with-navbar');
+
+	for (let i=0; i < sections.length; i++){
+		
+		// Set colours of page section background
+		if (i & 1){ 	// Odd
+			sections[i].classList.add('is-dark');
+		}
+		else{ 			// Even
+			sections[i].classList.add('is-light');
+		}
+
+		// Add link of section to navbar
+		var node = document.createElement('a');
+		var name = sections[i].getAttribute('name');
+		var textNode = document.createTextNode(name.charAt(0).toUpperCase() + name.slice(1));
+		node.appendChild(textNode);	// Add text
+		node.classList.add('navbar-item','level-item');	// Add classes
+		node.setAttribute('onclick', 'scrollToAnchor(\"'+name+'\")');
+		navbar.appendChild(node);
+
+	}
+	
+}, false);
+
+
 
 
 
@@ -8,46 +38,33 @@ function test(){
 	alert("Test alert.")
 }
 
-function isScrolled(){
-		var currentX = document.getElementById('project-container').scrollLeft - document.getElementById('project1').scrollLeft;
-		
-		var style = document.getElementById('project1').currentStyle || window.getComputedStyle(document.getElementById('project1'));
-		var cItemMarginR = parseFloat(style.marginRight);
-		var cItemWidth = document.getElementById('project1').offsetWidth + cItemMarginR*2;
 
-		updateControlActive(currentX, cItemWidth);
-}
+// // Project section
 
-
-function updateControlActive(currentX, itemWidth){
-	// Function to get index of item that was scrolled to
-	function getProjIndex(currentX, itemWidth, allDots){
-		for (let i=0; i<allDots.length; i++){
-			if (currentX == 0) {
-				return i;
-			}
-			if ( currentX > (i*itemWidth)-(itemWidth/10) && currentX < (i*itemWidth)+(itemWidth/10) ){
-				return i;
-			}
-		}
-	}
-
-	var allDots = document.getElementsByClassName('dot');
+function updateControlActive(project){
+	var allControlDots = document.getElementsByClassName('dot');
 	
-	// Make old dot inactive
-	for (let i = 0; i < allDots.length; i++){
-		if (allDots[i].classList.contains('active')){
-			allDots[i].classList.remove('active');
+	for (let i=0; i < allControlDots.length; i++){
+		let done = 0;
+			// Make current dot inactive
+		if (allControlDots[i].classList.contains('active')){
+			allControlDots[i].classList.remove('active');
+			done++;
+		}
+			// Make new dot active
+		if (i.toString() == project.replace('project','')){
+			allControlDots[i].classList.add('active');
+			done++;
+		}
+		if (done > 1) { // Quick break;
 			break;
 		}
 	}
 
-	// Make dot active
-	var id = getProjIndex(currentX, itemWidth, allDots);
-	allDots[id].classList.add('active');
-
 }
 
+
+// Contact form - if submitting empty field
 function updateContactFormHighlights() {
 	for (let i=0; i<document.getElementsByName('contact_form').length; i++) {
 		var input_field = document.getElementsByName('contact_form')[i];
@@ -92,7 +109,6 @@ function scrollToAnchor(anchor){
 function scrollToAnchorHorizontal(anchor){
 	document.getElementById(anchor).scrollIntoView({behavior: 'smooth', block:"nearest"});
 }
-
 
 
 function scroll_Next(x){

@@ -16,6 +16,9 @@ ul li a:hover {
 	color: grey;
 }
 
+a:hover {
+	opacity: 0.8;
+}
 
 
 /* Vertical */
@@ -38,7 +41,7 @@ ul li a:hover {
 
 /* Horizontal*/
 .proj-container {
-	overflow: hidden;
+	width: 100%;
 }
 
 .side-scroll-container {
@@ -71,6 +74,7 @@ ul li a:hover {
 	bottom: 1em;
 	left: 0;
 	text-align: center;
+	width: 100%;
 }
 
 .controls .dot {
@@ -135,6 +139,13 @@ div.top-nav-block {
 	position: relative;
 	height: 50px;
 }
+
+
+#spotify-playlist {
+	width: auto;
+	height: 30vh;
+}
+
 
 .shadow-bottom {
 	-webkit-box-shadow: 0px 3px 12px 0px rgba(54,54,54,1);

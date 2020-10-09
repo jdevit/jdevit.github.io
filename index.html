@@ -27,22 +27,17 @@
 <body>
 	<header>
 		
-		<section class="hero is-dark is-bold">
+		<section name="navigation" class="hero is-dark is-bold">
 
 				<nav class="navbar is-fixed-top has-background-dark shadow-bottom" role="navigation" aria-label="main navigation">
 			
-					<div class="container level noselect" id="fixed-nav">
+					<div class="container level noselect is-mobile" id="fixed-nav">
 						<div class="level-left is-narrow">
 							<h1 class="title level-item">Jeeeeer</h1>
 						</div>	
 						<div class="level-item">					
 
-							<div class="navbar level is-marginless is-mobile">
-								<a class="navbar-item level-item" onclick="scrollToAnchor('home');">Home</a>
-								<a class="navbar-item level-item" onclick="scrollToAnchor('about');">About</a>
-								<a class="navbar-item level-item" onclick="scrollToAnchor('projects');">Projects</a>
-								<a class="navbar-item level-item" onclick="scrollToAnchor('likes');">Likes</a>
-								<a class="navbar-item level-item" onclick="scrollToAnchor('other');">Other</a>
+							<div id="the-navbar" class="navbar level is-marginless is-mobile">
 							</div>
 								
 						</div>
@@ -69,41 +64,25 @@
 		<div class="top-nav-block anchor" id="top"></div>
 				
 		<div class="anchor" id="home"></div>
-		<section class="section hero is-fullheight-with-navbar">
-			<div class="hero-body">
+		<section name="home" class="section hero is-fullheight-with-navbar">
+			<div class="hero-body columns is-multiline">
 				<div class="container">
 					<h1 class="title">Hello and welcome!</h1>
-					<h2 class="subtitle">Feel free to explore!</h2>
+					<h2 class="subtitle">My name is Jeremy and I enjoy designing software.</h2>
 				</div>
 
-				<div class="container">				
-				</div>
-
-				<div class="container level">
-					<div class="container level-right">
-						<div class="rows">
-							<div class="row">
-								<a href="https://github.com/jeremyt0"> <img src="media/GitHub-Mark-32px.png"> My Github</a>
-							</div>
-							<div class="row">
-								<a href="https://linkedin.com/in/jeremytang0"> <img src="media/LI-In-Bug32.png"> My LinkedIn</a>
-							</div>
-						</div>
-					</div>
-
+				<div class="container">
+						<a href="https://github.com/jeremyt0"> <img src="media/GitHub-Mark-32px.png"></a>
+						<a href="https://linkedin.com/in/jeremytang0"> <img src="media/LI-In-Bug32.png"></a>
 				</div>
 			</div>
 			
 		</section>
 
 
-		<div class="anchor" id="about"></div>
-		<section class="section hero is-dark is-fullheight-with-navbar">
-			<div class="hero-body">
-				<div class="container">
-					<h1 class="title"></h1>
-					<h2 class="subtitle"></h2>
-				</div>
+		<!-- <div class="anchor" id="about"></div>
+		<section name="about" class="section hero is-fullheight-with-navbar">
+			<div class="hero-body columns is-multiline">
 
 				<div class="container">
 					<div>My name is Jeremy and I enjoy designing software.</div>
@@ -111,18 +90,61 @@
 			</div>
 
 			
+		</section> -->
+
+
+		<div class="anchor" id="skills"></div>
+		<section name="skills" class="section hero is-fullheight-with-navbar">
+			<div class="hero-body columns is-multiline">
+				<div class="container">
+					<h1 class="title">Skills</h1>
+				</div>
+
+				<div class="container">
+					<div>
+						<h2 class="subtitle">Refining</h2>
+						<ul>
+							<!-- Each element will have toggle click to expand for more detail -->
+							<li>Python</li>
+							<li>Java</li>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+						</ul>
+						<ul>
+							<li>Git</li>
+							<li>Wordpress</li>
+							<li>Bootstrap</li>
+							<li>Bulma</li>
+							<li>Jquery</li>
+
+						</ul>
+					</div>
+					<div>
+						<h2 class="subtitle">Learning</h2>
+						<ul>
+							<li>ReactJS</li>
+							<li>Ionic</li>
+						</ul>
+
+					</div>
+
+				</div>
+				
+			</div>
+
 		</section>
 
 		<div class="anchor" id="projects"></div>
-		<section class="section hero is-fullheight-with-navbar">
-			<div class="hero-body">
+		<section name="projects" class="section hero is-fullheight-with-navbar">
+			<div class="hero-body columns is-multiline">
 				<div class="container">
 					<h1 class="title has-text-centered is-uppercase">Projects</h1>
 						
 						<div class="proj-container">
-							<div class="side-scroll-container" id="project-container" onscroll="isScrolled()">
+							<div class="side-scroll-container">
 								<div id="project0" class="carousel-item" style="margin-left: 10%;">
-									<div><h1 class="title">Job Application Manager</h1></div>
+									<div><h1 class="subtitle">Job Application Manager</h1></div>
 									<div>
 										Python Flask
 									</div>
@@ -132,7 +154,7 @@
 									<div><a href="https://github.com/jeremyt0/job_application_manager">Source</a></div>
 								</div>
 								<div id="project1" class="carousel-item">
-									<div><h1 class="title">Document Search Engine</h1></div>
+									<div><h1 class="subtitle">Document Search Engine</h1></div>
 									<div>
 										Java
 									</div>
@@ -142,13 +164,13 @@
 									<div><a href="https://github.com/KwameYamoah/SharedProjects">Source</a></div>
 								</div>
 								<div id="project2" class="carousel-item">
-									<div><h1 class="title">Chess Android application</h1></div>
+									<div><h1 class="subtitle">Chess Android application</h1></div>
 									<div>Java, Android Studio</div>
 									<div>A chess game made for android</div>
 									<div><a>&nbsp;</a></div>
 								</div>
 								<div id="project3" class="carousel-item">
-									<div><h1 class="title">Mini IMDB movie scraper</h1></div>
+									<div><h1 class="subtitle">Mini IMDB movie scraper</h1></div>
 									<div>Python, Flask</div>
 									<div>
 										Input imdb movie url to retrieve information about movies.						
@@ -156,7 +178,7 @@
 									<div><a href="https://github.com/jeremyt0/movies">Source</a></div>
 								</div>
 								<div id="project4" class="carousel-item">
-									<div><h1 class="title">Big Two desktop application</h1></div>
+									<div><h1 class="subtitle">Big Two desktop application</h1></div>
 									<div>Java, JavaFX</div>
 									<div>Big Two card game as a desktop application.</div>
 									<div><a></a></div>
@@ -164,13 +186,14 @@
 
 								<div id="carousel-end"></div>
 								
-								<div class="carousel-arrows c-a-left" onclick="scroll_Next(-1)" >
+								<!-- ARROWS -->
+								<!-- <div class="carousel-arrows c-a-left" onclick="scroll_Next(-1)" >
 									<div class="arrow left"></div>
 								</div>
 								
 								<div class="carousel-arrows c-a-right" onclick="scroll_Next(1)">
 									<div class="arrow right"></div>
-								</div>
+								</div> -->
 							</div>
 
 
@@ -179,11 +202,11 @@
 							
 
 							<div class="controls level-item" id="projects-controls" text="hello">
-								<a class="dot active" onclick="scrollToAnchorHorizontal('project0')"></a>
-								<a class="dot" onclick="scrollToAnchorHorizontal('project1')"></a>
-								<a class="dot" onclick="scrollToAnchorHorizontal('project2')"></a>
-								<a class="dot" onclick="scrollToAnchorHorizontal('project3')"></a>
-								<a class="dot" onclick="scrollToAnchorHorizontal('project4')"></a>
+								<a class="dot active" onclick="scrollToAnchorHorizontal('project0'); updateControlActive('project0')"></a>
+								<a class="dot" onclick="scrollToAnchorHorizontal('project1'); updateControlActive('project1')"></a>
+								<a class="dot" onclick="scrollToAnchorHorizontal('project2'); updateControlActive('project2')"></a>
+								<a class="dot" onclick="scrollToAnchorHorizontal('project3'); updateControlActive('project3')"></a>
+								<a class="dot" onclick="scrollToAnchorHorizontal('project4'); updateControlActive('project4')"></a>
 							</div>
 						</div>
 
@@ -196,15 +219,13 @@
 
 
 		<div class="anchor" id="likes"></div>
-		<section class="section hero is-dark is-fullheight-with-navbar">
-			<div class="hero-body">
+		<section name="likes" class="section hero is-fullheight-with-navbar">
+			<div class="hero-body columns is-multiline">
 				
 				<div class="tile is-vertical">
 					<h1 class="title">These are some things I enjoy</h1>
 				</div>
-				<div class="tile is-vertical">
-					<div class="tile is-child"></div>
-				</div>
+
 				<div class="tile is-vertical">
 					<div class="tile is-child">
 							<h1 class="is-size-5">Film</h1>
@@ -215,11 +236,11 @@
 
 					</div>
 
-					<div class="tile is-child">
+					<div class="tile is-child"> 
 						<h1 class="is-size-5">Music</h1>
 						<p class="is-size-6">Spotify all-time favourites</p>
-						<div>
-							<iframe src="https://open.spotify.com/embed/playlist/66jibHDp6JemVvYjhFi3Tl" width="380" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						<div style="height: 100%;">
+							<iframe id="spotify-playlist" src="https://open.spotify.com/embed/playlist/66jibHDp6JemVvYjhFi3Tl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 						</div>
 						
 					</div>
@@ -236,48 +257,46 @@
 		</section>
 
 		<div class="anchor" id="other"></div>
-		<section class="section hero is-fullheight-with-navbar">
-			<div class="hero-body">				
-					<div class="tile is-vertical">
-						<h1 class="title">Contact</h1>
-						<h2 class="subtitle">Give me feedback or questions!</h2>
-						<h2 class="subtitle">Hugely appreciated &hearts;</h2>
-					</div>
-					<div class="tile is-vertical">
-						<div class="tile is-child"></div>
-					</div>
+		<section name="other" class="section hero is-fullheight-with-navbar">
+			<div class="hero-body columns is-multiline">
+
 					<div class="tile is-vertical">
 						<div class="tile is-child">
-							<div class="pr-6">
-								<div class="field" id="contact-form ">
-									<label class="label">Name</label>
-									<div class="control">
-									<input class="input" type="text" name="contact_form" id="contact_name_input" maxlength="30" placeholder="Name">
-									</div>
-								</div>
-								
-								<!-- <div class="field">
-									<label class="label">Email</label>
-									<div class="control">
-									<input class="input" type="email" name="contact_form" id="contact_email_input" maxlength="64" placeholder="Email">
-									</div>
-								</div> -->
+							<h1 class="title">Contact</h1>
+							<h2 class="subtitle">Give me feedback or questions!</h2>
+							<h2 class="subtitle">Hugely appreciated &hearts;</h2>
+						</div>
+					</div>
 
-								<div class="field">
-									<label class="label">Message</label>
-									<div class="control">
-									<textarea class="textarea has-fixed-size" name="contact_form" id="contact_message_input" maxlength="300" placeholder="Give me your wisdom" ></textarea>
-									</div>
-								</div>
-
+					<div class="tile is-vertical">
+						<div class="tile is-child pr-6">
+							<div class="field" id="contact-form ">
+								<label class="label">Name</label>
 								<div class="control">
-									<button class="button is-success" onclick="sendMail(); return false;">Send Message*</button>
+								<input class="input" type="text" name="contact_form" id="contact_name_input" maxlength="30" placeholder="Name">
 								</div>
-								<div>*Will open your email client</div>
-
-
-
 							</div>
+							
+							<!-- <div class="field">
+								<label class="label">Email</label>
+								<div class="control">
+								<input class="input" type="email" name="contact_form" id="contact_email_input" maxlength="64" placeholder="Email">
+								</div>
+							</div> -->
+
+							<div class="field">
+								<label class="label">Message</label>
+								<div class="control">
+								<textarea class="textarea has-fixed-size" name="contact_form" id="contact_message_input" maxlength="300" placeholder="Give me your wisdom" ></textarea>
+								</div>
+							</div>
+
+							<div class="control">
+								<button class="button is-success" onclick="sendMail(); return false;">Send Message*</button>
+							</div>
+							<div>*Will open your email client</div>
+
+
 						</div>
 					</div>
 				
@@ -289,7 +308,7 @@
 
 
 	<footer id="footer">
-		<section class="hero is-dark">
+		<section name="footer" class="hero is-dark">
 
 			<div class="hero-body">
 				<div class="container">

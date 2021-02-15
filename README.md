@@ -2,9 +2,12 @@
 
 ### Website
 
-- [jeremyt0.github.io](index.html)
+- [jeremyt0.github.io](https://jeremyt0.github.io/) 
+_[src](index.html)_
 
 ### Template for Threejs
 
-- [jeremyt0.github.io/ThreeJS/ThreeJsTemplate](ThreeJS/ThreeJsTemplate.html)
+- [jeremyt0.github.io/ThreeJS/ThreeJsTemplate](https://jeremyt0.github.io/ThreeJS/ThreeJsTemplate.html) 
+_[src](ThreeJS/ThreeJsTemplate.html)_
+
 

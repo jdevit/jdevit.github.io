@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>My first three.js app</title>
+		<title>ThreeJS Template</title>
 		<style>
 			body { margin: 0; }
 		</style>
@@ -31,14 +31,13 @@
 
 
 		<script>
-			var scene, camera, mesh, renderer, listener;
-var footstepsAudio;
+			
+var scene, camera, mesh, renderer, listener;
 var meshFloor, meshCeiling;
 const wallHeight = 10, wallWidth = 20;
 
 // var gameSize = { height: window.innerHeight, width: window.innerWidth };
 var gameSize = { height: 480, width: 768 };
-// var gameSize = { height: 800, width: 1200 };
 
 var keyboard = new THREEx.KeyboardState();
 var player = { height: 2, speed: 0.2, turnSpeed: Math.PI*0.02 };
@@ -55,7 +54,7 @@ const init = function () {
     renderer.setSize( gameSize.width, gameSize.height );
     document.getElementById('main-canvas-container').appendChild( renderer.domElement );
     
-    // Create walls, floor and ceiling
+    // Create floor
     let floor = new THREE.Mesh(
         new THREE.PlaneGeometry(wallWidth, wallWidth, 5, 5),
         new THREE.MeshPhongMaterial({ color: 'white', wireframe:true })
@@ -110,11 +109,7 @@ const render = function () {
 
 const update = function () {
 	// Keyboard controls
-	if ( keyboard.pressed("w") ) 
-	{ 
-		console.log("W")
-	}
-	if(keyboard.pressed("w")) {  // W key
+    if(keyboard.pressed("w")) {  // W key
         camera.position.x -= Math.sin(camera.rotation.y) * player.speed;
         camera.position.z += Math.cos(camera.rotation.y) * player.speed;
     }
@@ -130,7 +125,8 @@ const update = function () {
         camera.position.x -= Math.sin(camera.rotation.y + Math.PI/2) * player.speed;
         camera.position.z -= Math.cos(camera.rotation.y - Math.PI/2) * player.speed;
     }
-	if(keyboard.pressed("left")) {  // Left arrow key
+	
+    if(keyboard.pressed("left")) {  // Left arrow key
         camera.rotation.y -= player.turnSpeed;
     }
     if(keyboard.pressed("right")) {  // Right arrow key

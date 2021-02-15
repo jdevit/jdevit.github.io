@@ -48,7 +48,6 @@ const init = function () {
     // Camera and scene
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 60, gameSize.width / gameSize.height, 0.1, 1000 );
-    listener = new THREE.AudioListener();
 
     // Renderer
     renderer = new THREE.WebGLRenderer();
@@ -68,8 +67,6 @@ const init = function () {
 	let light = new THREE.AmbientLight(0xffffff, 0.8, 18);
     light.position.set(0, 3, 0);  // x,y,z
     scene.add(light);
-    
-
 
 
     // Cube
@@ -83,8 +80,6 @@ const init = function () {
 
 
 
-
-    
     
     
     // Set camera position

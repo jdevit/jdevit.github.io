@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+
+		<script src="../js/three.js"></script>
+		<script src="../js/controls/THREEx.KeyboardState.js"></script>
+
+	</head>
+	<body>
+        <h1>Template</h1>
+
+		<div id="instructions">
+			<h2>Keyboard controls</h2>
+			<h5>(W, A, S, D = Move, Arrow keys = Look around)</h5>
+		</div>
+
+		<div id="main-canvas-container"></div>
+
+
+
+		<div id="images-container"></div>
+		<div id="audios-container"></div>
+		<div id="videos-container" style="visibility: hidden;"></div>
+
+
+
+
+		<script>
+			var scene, camera, mesh, renderer, listener;
+var footstepsAudio;
+var meshFloor, meshCeiling;
+const wallHeight = 10, wallWidth = 20;
+
+// var gameSize = { height: window.innerHeight, width: window.innerWidth };
+var gameSize = { height: 480, width: 768 };
+// var gameSize = { height: 800, width: 1200 };
+
+var keyboard = new THREEx.KeyboardState();
+var player = { height: 2, speed: 0.2, turnSpeed: Math.PI*0.02 };
+
+
+const init = function () {
+    // Camera and scene
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera( 60, gameSize.width / gameSize.height, 0.1, 1000 );
+    listener = new THREE.AudioListener();
+
+    // Renderer
+    renderer = new THREE.WebGLRenderer();
+    renderer.domElement.id = 'main-canvas';
+    renderer.setSize( gameSize.width, gameSize.height );
+    document.getElementById('main-canvas-container').appendChild( renderer.domElement );
+    
+    // Create walls, floor and ceiling
+    let floor = new THREE.Mesh(
+        new THREE.PlaneGeometry(wallWidth, wallWidth, 5, 5),
+        new THREE.MeshPhongMaterial({ color: 'white', wireframe:true })
+    );
+	floor.rotation.x -= Math.PI/2;
+	scene.add(floor);
+
+    // Add lights
+	let light = new THREE.AmbientLight(0xffffff, 0.8, 18);
+    light.position.set(0, 3, 0);  // x,y,z
+    scene.add(light);
+    
+
+
+
+    // Cube
+    let cube = new THREE.Mesh( 
+        new THREE.BoxGeometry(1, 1, 1),
+        new THREE.MeshPhongMaterial( { color: 'green' } )
+    );
+    cube.position.y += 1;
+
+    scene.add( cube );
+
+
+
+
+    
+    
+    
+    // Set camera position
+    camera.position.set(0, player.height, -8);  // Set position
+    camera.lookAt(new THREE.Vector3(0, player.height, 0));  // Look at
+
+
+    // Animate
+    animate();
+}
+
+
+
+
+
+// Animate
+const animate = function () {
+    requestAnimationFrame( animate );
+
+    render();
+    update();
+};
+
+const render = function () {
+
+    renderer.render( scene, camera );
+}
+
+const update = function () {
+	// Keyboard controls
+	if ( keyboard.pressed("w") ) 
+	{ 
+		console.log("W")
+	}
+	if(keyboard.pressed("w")) {  // W key
+        camera.position.x -= Math.sin(camera.rotation.y) * player.speed;
+        camera.position.z += Math.cos(camera.rotation.y) * player.speed;
+    }
+    if(keyboard.pressed("s")) {  // S key
+        camera.position.x += Math.sin(camera.rotation.y) * player.speed;
+        camera.position.z -= Math.cos(camera.rotation.y) * player.speed;
+    }
+    if(keyboard.pressed("a")) {  // A key
+        camera.position.x -= Math.sin(camera.rotation.y - Math.PI/2) * player.speed;
+        camera.position.z -= Math.cos(camera.rotation.y + Math.PI/2) * player.speed;
+    }
+    if(keyboard.pressed("d")) {  // D key
+        camera.position.x -= Math.sin(camera.rotation.y + Math.PI/2) * player.speed;
+        camera.position.z -= Math.cos(camera.rotation.y - Math.PI/2) * player.speed;
+    }
+	if(keyboard.pressed("left")) {  // Left arrow key
+        camera.rotation.y -= player.turnSpeed;
+    }
+    if(keyboard.pressed("right")) {  // Right arrow key
+        camera.rotation.y += player.turnSpeed;
+    }
+	if(keyboard.pressed("up")) {  // Up arrow key
+        camera.position.y += player.speed;
+    }
+    if(keyboard.pressed("down")) {  // Down arrow key
+        camera.position.y -= player.speed;
+    }
+}
+
+
+
+window.onload = init();
+
+
+		</script>
+
+	</body>
+</html>
+

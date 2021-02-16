@@ -66,6 +66,7 @@ footer div {
 a {
     color: #eeeeee;
     text-decoration: none;
+    transition: all 0.4s;
 }
 
 a:hover {
@@ -108,7 +109,6 @@ ul a{
 
 .active {
     color: #ffbd69;
-    transition: all 1s;
 }
 
 .nav-title {
@@ -127,6 +127,8 @@ ul a{
     padding-left: 1vw;
     padding-right: 1vw;
     cursor: pointer;
+    transition: all 0.5s;
+
 }
 
 .nav-select a {
@@ -156,12 +158,12 @@ img:hover {
     text-align: center;
 }
 
-.container {
+.content {
     display: flex;
     justify-content: center;
 }
 
-.container div {
+.content div {
     justify-content: center;
     padding-right: 1vw;
 }

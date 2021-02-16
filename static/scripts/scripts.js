@@ -29,9 +29,7 @@ const toggleSection = (id) => {
             navBtn.classList.toggle('active');
             break;
         }
-        
     }
-    
     
 }
 

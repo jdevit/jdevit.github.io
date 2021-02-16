@@ -39,6 +39,7 @@ nav {
 section {
     padding-top: 50px;
     padding-bottom: 30px;
+    padding-inline: 20px;
     display: flex;
     height: calc(100% - 80px);
     justify-content: center;
@@ -174,6 +175,34 @@ img:hover {
 	height: 30vh;
 }
 
+
+
+
+.visible {
+    visibility: visible;
+    transition: 1s;
+}
+
+.invisibile {
+    visibility: hidden;
+    transition: 1s;
+}
+
 .no-select {
     user-select: none;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+    .scroll-list {
+        overflow-y: auto;
+        height: 10vh;
+        border-top: groove 1px #543864;
+    }
+    .scroll-list ul {
+        margin: 5px;
+    }
+  }

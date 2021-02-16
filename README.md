@@ -8,7 +8,7 @@ _[src](index.html)_
 ### Old Website
 
 - [jeremyt0.github.io/old](https://jeremyt0.github.io/old/) 
-_[src](index.html)_
+_[src](old/index.html)_
 
 ### Template for Threejs
 

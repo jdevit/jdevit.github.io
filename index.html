@@ -4,27 +4,164 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy Tang</title>
+    <title>Jeremy Tang Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/styles/styles.css" media="screen">
+    <link rel="stylesheet" href="static/styles/flickity.min.css" media="screen">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- JavaScript -->
+    <script src="static/scripts/scripts.js"></script>
+    <script src="static/scripts/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Hello and welcome!</h1>
-        <h2>My name is Jeremy and I enjoy designing software.</h2>
-    </div>
 
-    <div>
-        <div>
-            <a href="https://github.com/jeremyt0"><img src="old/media/GitHub-Mark-32px.png"/></a>
+    <head>
+        <nav>
+            <h3 class="nav-title no-select">Jeeeeer</h3>
+            <div class="nav-select-container">
+                <a class="nav-select active" onclick="toggleSection('home');">home</a>
+                <a class="nav-select" onclick="toggleSection('about');">about</a>
+                <a class="nav-select" onclick="toggleSection('projects');">projects</a>
+                <a class="nav-select" onclick="toggleSection('other');">other</a>
+            </div>
+        </nav>
+    </head>
+
+    <section id="home" class="active-section">
+        <div class="section-container">
+            <div>
+                <h1>Hello and welcome!</h1>
+                <h2>My name is Jeremy and I enjoy designing software.</h2>
+            </div>
+            
+            <div>
+                <div>
+                    <a href="https://github.com/jeremyt0"><img src="old/media/GitHub-Mark-32px.png"/></a>
+
+                    <a href="https://linkedin.com/in/jeremytang0"><img src="old/media/LI-In-Bug32.png"/></a>
+                </div>
+            </div>
+
         </div>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="hidden">
+        <div class="section-container">
+            <div>
+                <h1>About</h1>
+            </div>
+
+            <div class="container">
+                <div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>NoSQL</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Tools/Libraries</h3>
+                    <ul>
+                        <li>Flask</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <li>Requests</li>
+                        <li>Beautiful Soup</li>
+                        <li>Selenium</li>
+                        <li>OpenCV</li>
+                        <li>React JS</li>
+                        <li>Node JS</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3>Specialties</h3>
+                    <ul>
+                        <li>Automation</li>
+                        <li>Data scraping</li>
+                        <li>Computer Vision</li>
+                        <li>Fullstack development</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="hidden">
+        <div class="section-container">
+            <div>
+                <h1>Projects</h1>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="https://github.com/jeremyt0">Check out my github</a></li>
+                    <li><a href="https://github.com/jeremyt0/lichess-bot">Lichess bot</a></li>
+                    <li><a href="https://jeremyt0.github.io/ThreeJS/ThreeJsTemplate">ThreeJS Template</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Other -->
+    <section id="other" class="hidden">
+        <div class="section-container">
+            <div>
+                <h1>These are some things I enjoy</h1>
+            </div>
+
+            <div>
+                <div>
+                    <h3>Film</h3>
+                    <ul>
+                        <li><a href="https://www.imdb.com/list/ls077264756/">My recommendations for anyone</a></li>
+                        <li><a href="https://www.imdb.com/list/ls062972051/">Ones that made me smile</a></li>
+                    </ul>
+
+                </div>
+                <div>
+                    <h3>Music</h3>
+                    <p>All-time playlist</p>
+                    <div style="height: 100%;">
+                        <iframe id="spotify-playlist" src="https://open.spotify.com/embed/playlist/66jibHDp6JemVvYjhFi3Tl" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                    <p>I like playing the piano as well. :)</p>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <footer>        
         <div>
-            <a href="https://linkedin.com/in/jeremytang0"><img src="old/media/LI-In-Bug32.png"/></a>
+            <a href="https://jeremyt0.github.io/old/index">Old website link</a>
         </div>
 
-    </div>
+        <div class="transparent">
+            I like water
+        </div>
+        
+        <div class="no-select">
+            Jeremy Tang 2021
+        </div>
 
-    <div>
-        <h5><a href="https://jeremyt0.github.io/old/index">Old website</a></h5>
-    </div>
+    </footer>
+
     
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Virtual Art Gallery</title>
+		<style>
+			body { margin: 0; }
+			#main { display: flex; flex-direction: column; align-items: center; }
+			#instructions { display: flex; justify-content: center;  }
+			#footer { background-color: darksalmon; height: 50px; width: 100%; display: flex; justify-content: space-around; position: fixed; left: 0; bottom: 0;}
+		</style>
+
+		<script src="js/three.js"></script>
+		<script src="js/controls/keyboard.js"></script>
+		<script src="js/gallery/gallery.js"></script>
+		<script src="js/gallery/objects.js"></script>
+		<script src="js/gallery/room.js"></script>
+
+	</head>
+	<body>
+
+		<div id="main">
+
+			<h1>Virtual Art Gallery</h1>
+	
+			<div id="instructions">
+				<div>
+					<h2>Keyboard controls</h2>
+					<h5>(W, A, S, D = Move, Arrow keys = Look around)</h5>
+					<h5>(Shift = Float down, Space = Float up, R = Reset height)</h5>
+				</div>
+	
+				<div>
+					<h2>Video Controls</h2>
+					<h5>(P = Toggle Play/Pause, O = Stop, M = Mute)</h5>
+					<!-- <h5>(K = Select previous video, L = Select next video)</h5> -->
+				</div>
+			</div>
+	
+	
+			<!-- Main js canvas -->
+			<div id="main-canvas-container"></div>
+				
+			<div id="selectedVid">
+				<span>Selected Video: </span>
+				<span id="selectedVidId" style="font-weight: bold;"></span>
+				<span id="selectedVidPlaying" style="font-style: italic;"></span>
+				<span id="selectedVidMuted"style="font-style: italic;"></span>
+			</div>
+
+			<div id="images-container"></div>
+			<div id="audios-container"></div>
+			<div id="videos-container"></div>
+
+		</div>
+		
+		<!-- Main.js -->
+		<script src="js/gallery/main.js"></script>
+		
+		<!-- Footer -->
+		<footer>
+			<div id="footer">
+				<h5><a href="https://jeremyt0.github.io/ThreeJS/ThreeJsTemplate">Example ThreeJS Template</a></h5>
+				<h4><a href="https://github.com/jeremyt0/jeremyt0.github.io/blob/master/ThreeJS/ArtGallery.html">Github Source</a></h4>
+				<h5><a href="https://jeremyt0.github.io/">jeremyt0.github.io</a></h5>
+			</div>
+		</footer>
+	
+	</body>
+</html>

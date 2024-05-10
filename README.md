@@ -5,10 +5,10 @@
 - [jeremyt0.github.io](https://jeremyt0.github.io/) 
 _[src](index.html)_
 
-### Old Website
+### V 0.0.1 Website
 
-- [jeremyt0.github.io/old](https://jeremyt0.github.io/old/) 
-_[src](old/index.html)_
+- [jeremyt0.github.io/v001](https://jeremyt0.github.io/v001/) 
+_[src](v001/index.html)_
 
 ### Threejs Virtual Art Gallery
 - [jeremyt0.github.io/ThreeJS/ArtGallery](https://jeremyt0.github.io/ThreeJS/ArtGallery.html) 

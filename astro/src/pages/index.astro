@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+---
+
+<Layout title="Jeremy Tang">
+	<main>
+
+		<section id="home">
+			<div class="section-container">
+				<div class="section-content">
+					<div id="bio-section">
+						<h1>Jeremy Tang</h1>
+						<h2>Software Engineer</h2>
+
+						<p id="bio-text" class="secondary-font-color">I love learning and exploring</p>
+
+					</div>
+					
+					<div class="links">
+						<a href="https://github.com/jeremyt0"><img src="/github-icon.png" class="social-media-icons"/></a>
+	
+						<a href="https://linkedin.com/in/jeremytang0"><img src="/linkedin-icon.png" class="social-media-icons"/></a>
+					</div>
+				</div>
+	
+			</div>
+	
+		</section>
+	
+		<!-- About -->
+		<section>
+			<div class="section-container">
+				<div class="section-content">
+					<h3>About</h3>
+	
+					<h4>A brief history of time:</h4>
+					<div>
+						<p>Graduated from university in Computer Science.</p>
+						<p>Started career in startups focusing on computer vision and automation as a full-stack developer</p>
+						<p>Now working for a multi-modal travel startup with a focus in backend.</p>
+					</div>
+					
+				</div>
+	
+			</div>
+		</section>
+	
+	
+		<!-- Films -->
+		<section>
+			<div class="section-container">
+	
+				<div class="section-content">
+					<div>
+						<h3>Films I like</h3>
+						<ul>
+							<li>
+								<a href="https://www.imdb.com/list/ls077264756/">
+									My recommendations for anyone
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="external-link-arrow" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.imdb.com/list/ls062972051/">
+									Ones that made me smile
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="external-link-arrow" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+								</a>
+							</li>
+						</ul>
+	
+					</div>
+					
+				</div>
+	
+			</div>
+		</section>
+
+
+		<!-- Music -->
+		<section>
+			<div class="section-container">
+	
+				<div class="section-content">
+					<div>
+						<h3>Music I like</h3>
+						
+						<h4>Spotify Playlists:</h4>
+
+						<p>All-time Songs</p>
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/66jibHDp6JemVvYjhFi3Tl?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>						
+						<p>All-time Albums</p>
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6GVC2EzNvXlN7Ft2xQCOft?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					</div>
+					
+				</div>
+	
+			</div>
+		</section>
+
+
+		<!-- Other -->
+		<section id="other">
+			<div class="section-container">
+	
+				<div class="section-content">
+					<div>
+						<h3>Contact</h3>
+						
+						<p>
+							Send me a message for my CV
+						</p>
+
+					</div>
+					
+				</div>
+	
+			</div>
+		</section>
+	
+		<footer>
+			<div>
+				Built with AstroJS
+			</div>
+
+			<div>
+				2024
+			</div>
+
+		</footer>
+
+
+	</main>
+</Layout>
+
+<style>
+
+	/* 
+	Colour palette #1
+	#465769: rgb(70, 87, 105)
+
+	#496989: rgb(73, 105, 137)
+	#58A399: rgb(88, 163, 153)
+	#A8CD9F: rgb(168, 205, 159)
+	#E2F4C5: rgb(226, 244, 197)
+	 */
+
+	.primary-font-color {
+		color: rgb(230, 230, 250);
+	}
+	.secondary-font-color {
+		color: rgb(160, 166, 188);
+	}
+	.link-font-color {
+		color: #D9EDBF;
+	}
+	
+	a {
+		color: #58A399;
+	}
+
+	p {
+		color: rgb(160, 166, 188);
+	}
+
+	.external-link-arrow {
+		height: 1em;
+	}
+
+	main {
+		background-color: rgb(70, 87, 105);
+		margin: auto;
+		padding: 1rem;
+		width: 100%;
+		color: rgb(230, 230, 250);
+		font-size: 20px;
+		line-height: 1.6;
+		display: flex;
+		flex-direction: column;
+	}
+
+	section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80vh;
+	}
+	
+	.section-container {
+		display: flex;
+		width: 100%;
+		padding: 3rem;
+	}
+	
+	.section-content {
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+	}
+
+	#bio-section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#bio-section h1 {
+		font-size: 3rem;
+		margin: 0;
+	}
+	#bio-section h2 {
+		font-size: 1.5rem;
+		margin: 0;
+	}
+	#bio-text {
+		font-size: medium;
+		margin-top: 0.67em;
+		margin-bottom: 0.67em;
+	}
+
+	footer {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-evenly;
+		font-size: small;
+	}
+
+	.social-media-icons {
+		height: 30px;
+	}
+
+	#spotify-playlist {
+		width: 80%;
+		height: 30vh;
+	}
+
+
+	@media only screen and (max-width: 600px) {
+		.section-content {
+			width: auto;
+		}
+	}
+
+
+</style>

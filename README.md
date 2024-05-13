@@ -14,12 +14,13 @@ _[src](/v001/index.html)_
 - [jeremyt0.github.io/v002](https://jeremyt0.github.io/v002/)
 _[src](/v002/index.html)_
 
-### Threejs Virtual Art Gallery
+### Threejs Virtual Art Gallery (not deployed)
+
 - [jeremyt0.github.io/ThreeJS/ArtGallery](https://jeremyt0.github.io/ThreeJS/ArtGallery)
 _[src](ThreeJS/ArtGallery/index.html)_
 
 
-### Template for Threejs
+### Template for Threejs (not deployed)
 
 - [jeremyt0.github.io/ThreeJS/ThreeJsTemplate](https://jeremyt0.github.io/ThreeJS/ThreeJsTemplate)
 _[src](ThreeJS/ThreeJsTemplate/index.html)_
